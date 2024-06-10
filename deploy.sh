@@ -77,9 +77,9 @@ deploy() {
     # - 3002:3002 \
     --env-file scim.env \
     --restart always \
-    --secret workspace-credentials \
+    # --secret workspace-credentials \
     # --secret workspace-settings \
-    # --secret scimsession \
+    --secret scimsession \
     1password/scim:v2.9.5 || return 1
 
   echo "====================="
